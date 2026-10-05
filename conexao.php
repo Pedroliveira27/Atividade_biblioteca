@@ -10,4 +10,3 @@ $conexao = mysqli_connect(
 if (!$conexao) {
     die("Erro na conexão: " . mysqli_connect_error());
 }
- 
