@@ -1,22 +1,22 @@
 <?php
-include("verifcar_sessao.php");
+include("verificar_sessao.php");
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Livro - Biblioteca</title>
     <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body>
     <div class="container">
         <h1>Cadastrar Livro</h1>
         <p class="subtitulo">Preencha os dados do novo livro.</p>
- 
+
         <form action="salvar_livro.php" method="POST">
             <div class="form-group">
                 <label for="autor">Título</label>
@@ -33,17 +33,16 @@ include("verifcar_sessao.php");
                     <option value="Emprestado">Emprestado</option>
                 </select>
             </div>
- 
-            <button type="submit" class="btn btn-block btn-secesso">
+
+            <button type="submit" class="btn btn-block btn-sucesso">
                 Salvar Livro
             </button>
- 
+
         </form>
         <a href="painel.php" class="btn btn-voltar">Voltar para o Painel.</a>
     </div>
- 
- 
+
+
 </body>
- 
+
 </html>
- 

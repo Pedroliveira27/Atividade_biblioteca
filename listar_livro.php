@@ -30,13 +30,13 @@ $resultado = mysqli_query($conexao, $sql);
 
 <body>
     <!-- Container mais largo para acomodar a tabela -->
-     <div class="container container-largo">
+    <div class="container container-largo">
         <h1>Listagem de Livros</h1>
         <p class="subtítulo">
             Todos os livros cadastrados no sistema.
         </p>
         <!-- Tabela estilizada com os dados dos livros -->
-         <table class="tabela-livros">
+        <table class="tabela-livros">
             <tr>
                 <th>ID</th>
                 <th>Título</th>
@@ -47,35 +47,35 @@ $resultado = mysqli_query($conexao, $sql);
             <?php
             // Loop While percorre cada linha retornada
             // pela consulta SQL.
-            while ($livro = mysqli_fetch_asoc($resultado)) {
+            while ($livro = mysqli_fetch_assoc($resultado)) {
                 ?>
                 <tr>
-                    <td><?php echo $livros['id']; ?></td>
-                    <td><?php echo $livros['título']; ?></td>
-                    <td><?php echo $livros['autor']; ?></td>
-                    <td><?php echo $livros['status']; ?></td>
+                    <td><?php echo $livro['id']; ?></td>
+                    <td><?php echo $livro['titulo']; ?></td>
+                    <td><?php echo $livro['autor']; ?></td>
+                    <td><?php echo $livro['status']; ?></td>
                     <td class="acoes">
                         <!-- Link para editar o livro -->
-                         <!-- Envia o ID pela URL com ?id= -->
-                          <a href="editar-livro.php?id=<?php echo $livro['id']; ?>" class="link-editar">
+                        <!-- Envia o ID pela URL com ?id= -->
+                        <a href="editar-livro.php?id=<?php echo $livro['id']; ?>" class="link-editar">
                             Editar
-                          </a>
+                        </a>
 
-                          <!-- Link para excluir o livro com confirmação do JS -->
-                           <a href="excluir_livro.php?id=
+                        <!-- Link para excluir o livro com confirmação do JS -->
+                        <a href="excluir_livro.php?id=
                            <?php echo $livro['id']; ?>" class="link-excluir"
-                           onclick="return confirm('Tem certeza que deseja excluir o livro cabaço?')>
-                           Excluir
+                            onclick="return confirm('Tem certeza que deseja excluir o livro cabaço?')">
+                            Excluir
                         </a>
                     </td>
                 </tr>
-                <?php } ?>
-         </table>
-         >!-- Botão de voltar para o painel principal -->
-         <a href="painel.php" class="btn btn-voltar">
-         Voltar para o painel
-         </a>
-         </div>
+            <?php } ?>
+        </table>
+        <!-- Botão de voltar para o painel principal -->
+        <a href="painel.php" class="btn btn-voltar">
+            Voltar para o painel
+        </a>
+    </div>
 
 </body>
 

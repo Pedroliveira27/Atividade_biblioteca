@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usário - Biblioteca</title>
+    <title>Cadastro de Usuário - Biblioteca</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,27 +14,27 @@
         <p class="subtitulo">Crie sua conta para acessar o sistema da biblioteca.</p>
         <?php
         if (isset($_GET['erro']) && $_GET['erro'] === 'email') {
-            echo '<div class= "mensagem-erro">Este email já está cadastrado.</div>';
+            echo '<div class= "mensagem-erro">Este email já está cadastro.</div>';
         }
         ?>
 
-        <form action="salvar_usuario.php" method="$_POST">
-            <div class="form-group">
+        <form action="salvar_usuario.php" method="POST">
+            <div class="from-group">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Digite seu nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="nome" placeholder="Digite seu email" required>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
             </div>
             <div class="form-group">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </div>
-            <button type="submit" class="btn btn-block">Cadastrar</button>
+            <button type="submit" class="btn btn-block">Cadastro</button>
         </form>
         <div class="nav-links">
-            <p>Já tem conta?<a href="login.php">Fazer login</a></p>
+            <p>Já tem conta? <a href="login.php">Fazer login</a></p>
         </div>
         <a href="login.php" class="btn btn-voltar">Voltar para login</a>
         <div class="dica-navegacao">
